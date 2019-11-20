@@ -34,7 +34,7 @@ describe "Songs and Artists" do
         song = Song.new("In the Aeroplane Over the Sea")
         artist = Artist.new("Neutral Milk Hotel")
         song.artist = artist
-
+        binding.pry
         expect(artist.songs).to include(song)
       end
     end
