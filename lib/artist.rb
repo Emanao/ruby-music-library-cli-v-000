@@ -11,7 +11,7 @@ class Artist
 
   def initialize(name)
     self.name=name
-    @songs = []
+    #@songs = []
   end
   def add_song(song)
     song.artist = self unless song.artist == self
