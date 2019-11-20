@@ -3,7 +3,8 @@ class Genre
   extend Concerns::Memorable::ClassMethods, Concerns::Findable
   include Concerns::Memorable::InstanceMethods
 
-  attr_accessor :name, :songs
+  attr_accessor :name
+  attr_reader :songs
 
   @@all=[]
 
