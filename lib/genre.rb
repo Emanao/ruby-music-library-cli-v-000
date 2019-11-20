@@ -16,7 +16,7 @@ class Genre
     #songs<<song unless songs.include?(song)
   end
   def artists
-    Song.all.collect{|song| song.artist}.uniq
+    songs.collect{|song| song.artist}.uniq
   end
   def songs
     @songs = Song.all
