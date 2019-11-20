@@ -12,11 +12,11 @@ class Genre
     self.songs=[]
   end
   def add_song(song)
-    song.genre = self unless song.genre == self
-    songs<<song unless songs.include?(song)
+    song.genre = self #unless song.genre == self
+    #songs<<song unless songs.include?(song)
   end
   def artists
-    songs.collect{|song| song.artist}.uniq
+    Song.all.collect{|song| song.artist}.uniq
   end
   def self.all
     @@all
