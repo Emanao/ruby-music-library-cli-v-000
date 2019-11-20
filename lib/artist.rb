@@ -22,7 +22,7 @@ class Artist
     Song.all.collect {|song| song.genre}.uniq
   end
   def songs
-    Song.all
+    Song.all.inspect
   end
 
   def self.all
