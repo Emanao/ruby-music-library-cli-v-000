@@ -9,7 +9,7 @@ class Genre
 
   def initialize(name)
     self.name=name
-    self.songs=[]
+    @songs=[]
   end
   def add_song(song)
     song.genre = self #unless song.genre == self
@@ -17,6 +17,9 @@ class Genre
   end
   def artists
     Song.all.collect{|song| song.artist}.uniq
+  end
+  def songs
+    @songs = Song.all
   end
   def self.all
     @@all
